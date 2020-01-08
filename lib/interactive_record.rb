@@ -36,5 +36,5 @@ class InteractiveRecord
       values << "'#{send(col_name)}'" unless sned 
         (col_name).nil? 
       end 
-      values.join(",")
+      values.join(", ")
 end

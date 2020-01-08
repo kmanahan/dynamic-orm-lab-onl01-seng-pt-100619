@@ -28,6 +28,10 @@ class InteractiveRecord
   
   def self.col_name_for_insert 
     self.class.column_names.delete_if {|col_name| 
-      values << 
+      values << "'#{send(col_name)}'" unless send(col_name).nil?
+    end
+    values.join(", ")
+  end
+  
   end 
 end

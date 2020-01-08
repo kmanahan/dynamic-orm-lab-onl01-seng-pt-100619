@@ -17,8 +17,8 @@ class InteractiveRecord
   end 
   
   def initalize(attributes={})
-    options.each do |, value|
-      self.send("#{property}=", value)
+    options.each do |attributes, value|
+      self.send("#{attributes}=", value)
     end
   end 
 end

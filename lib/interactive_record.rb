@@ -34,5 +34,7 @@ class InteractiveRecord
     values = [] 
     self.class.column_names.each do |col_name|
       values << "'#{send(col_name)}'" unless sned 
-        (col_name).nil?
+        (col_name).nil? 
+      end 
+      values.join(",")
 end

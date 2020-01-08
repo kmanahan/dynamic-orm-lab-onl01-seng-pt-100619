@@ -37,4 +37,7 @@ class InteractiveRecord
       end 
       values.join(", ") 
     end 
+    
+    def save 
+      sql = "INSERT INTO #{TABLE_NAME_FOR_NSERT}"
 end

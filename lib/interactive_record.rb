@@ -12,7 +12,9 @@ class InteractiveRecord
     table_info = DB[:conn].execute(sql)
     column_names = [] 
     table_info.each do |row| column_names << row["name"]
-  end
+    end
+    column_names.compact 
+  end 
   
   def initalize(options={})
     options.each do |property, value|

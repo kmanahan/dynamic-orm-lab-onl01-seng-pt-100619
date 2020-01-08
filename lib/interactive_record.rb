@@ -13,6 +13,10 @@ class InteractiveRecord
     column_names = [] 
     table_info.each do |row| column_names << row["name"]
   end
-    
+  
+  def initalize(options={})
+    options.each do |property, value|
+      self.send("#{property}=", value)
+    end
   end 
 end
